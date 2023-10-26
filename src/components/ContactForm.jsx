@@ -17,13 +17,13 @@ export const ContactForm = ({ onAdd }) => {
         <div>
             <Formik
                 initialValues={{
-                    // contacts: [],
                     name: '',
                     number: '',
                 }}
 
                 validationSchema={phonebookSchema}
                 onSubmit={(values, actions) => {
+                    
                     onAdd(values);
                     actions.resetForm();
                 }}

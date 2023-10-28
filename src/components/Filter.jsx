@@ -1,17 +1,17 @@
-
+import { Title, InputFilter, DivBox } from "./Filter.styled"
 
 export const Filter = ({ filter, onFilterChange }) => {
     return (
-        <div>
-            <p>Find contacts by Name</p>
-            <label htmlFor="filter">Search contacts: </label>
-            <input
+        <DivBox>
+            <Title>Find contacts by Name</Title>
+            <label htmlFor="filter"> </label>
+            <InputFilter
                 type="text"
                 id="filter"
                 value={filter}
                 onChange={onFilterChange}
             />
-        </div>
+        </DivBox>
     )
 
     

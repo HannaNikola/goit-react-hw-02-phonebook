@@ -1,7 +1,8 @@
 
-import { Formik, Field, Form, ErrorMessage } from 'formik';
+import { Formik} from 'formik';
 import * as Yup from 'yup';
-
+// import { Box } from './ContactForm.styled'
+import { StyleForm, ButtonAdd, StyleError, InputStyle , Box } from './ContactForm.styled';
 
 
 
@@ -14,7 +15,7 @@ const phonebookSchema = Yup.object().shape({
 
 export const ContactForm = ({ onAdd }) => {
     return (
-        <div>
+        <Box>
             <Formik
                 initialValues={{
                     name: '',
@@ -30,20 +31,20 @@ export const ContactForm = ({ onAdd }) => {
 
             >
 
-                <Form>
+                <StyleForm>
                     <label htmlFor="name">Name</label>
-                    <Field id="name" name="name" />
-                    <ErrorMessage name="name" />
+                    <InputStyle id="name" name="name" />
+                    <StyleError name="name" component="div" />
 
 
                     <label type="tel" htmlFor="number">Number</label>
-                    <Field id="s" name="number" />
-                    <ErrorMessage name="number" />
+                    <InputStyle id="s" name="number" />
+                    <StyleError name="number" component="div" />
 
-                    <button type="submit">Add contact</button>
-                </Form>
+                    <ButtonAdd type="submit">Add contact</ButtonAdd>
+                </StyleForm>
 
             </Formik>
-        </div>
+        </Box>
     );
 };

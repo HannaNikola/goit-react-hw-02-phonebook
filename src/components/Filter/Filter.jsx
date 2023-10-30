@@ -14,5 +14,5 @@ export const Filter = ({ filter, onFilterChange }) => {
         </DivBox>
     )
 
-    
+
 }

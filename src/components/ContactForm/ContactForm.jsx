@@ -1,14 +1,14 @@
 
-import { Formik} from 'formik';
+import { Formik } from 'formik';
 import * as Yup from 'yup';
 // import { Box } from './ContactForm.styled'
-import { StyleForm, ButtonAdd, StyleError, InputStyle , Box } from './ContactForm.styled';
+import { StyleForm, ButtonAdd, StyleError, InputStyle, Box } from './ContactForm.styled';
 
 
 
 const phonebookSchema = Yup.object().shape({
- name: Yup.string().min(3, 'Too short!').required('This field is required'),
- number: Yup.number().min(6, 'Too short!').required('This field is required'),
+    name: Yup.string().min(3, 'Too short!').required('This field is required'),
+    number: Yup.number().min(6, 'Too short!').required('This field is required'),
 
 });
 
@@ -24,7 +24,7 @@ export const ContactForm = ({ onAdd }) => {
 
                 validationSchema={phonebookSchema}
                 onSubmit={(values, actions) => {
-                    
+
                     onAdd(values);
                     actions.resetForm();
                 }}

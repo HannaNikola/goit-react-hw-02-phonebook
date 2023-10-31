@@ -35,7 +35,7 @@ export const ButtonAdd = styled.button`
   margin-top: 20px;
   margin-bottom: 15px;
 
-  :hover {
+  &:hover {
     color: red;
   }
 `;
